@@ -6,6 +6,7 @@
 body {
   background-color: white;
   font-size: 30px;
+  font-family: sans-serif;
 }
 
 header {
@@ -15,17 +16,41 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   max-width: 1520px;
   height: 65px;
   padding: 16px 24px;
   background-color: #fff;
   margin-inline: auto;
+  border-bottom: 1px solid #ccc;
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 32px;
+}
+.logo img {
+  width: 32px;
+  margin-right: 10px;
+}
+.logo h6 {
+  color: #7F56D9;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.nav {
+  margin-right: auto;
+  margin-bottom: 10px;
+}
 .nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,11 +59,92 @@ header {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  gap: 16px;
+  gap: 18px;
+}
+.nav li a {
+  color: #252C32;
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 14px;
+}
+.nav .btn {
+  background-color: #FFFFFF;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  padding: 4px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+.icons .profile {
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.burger {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+.burger span {
+  display: block;
+  height: 3px;
+  background-color: #5B6871;
+  border-radius: 2.5px;
 }
 
 @media (max-width: 960px) {
+  header {
+    max-width: 800px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+  }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 11px;
+  }
   .nav {
     display: none;
+  }
+}
+@media (max-width: 360px) {
+  header {
+    max-width: 300px;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+  }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 11px;
+  }
+  .nav {
+    display: none;
+  }
+  .icons img:not(.profile) {
+    display: none;
+  }
+  .profile {
+    margin-right: 16px;
   }
 }
