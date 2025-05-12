@@ -1,0 +1,91 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue: #00f;
+  --primary-color: yellow;
+  --secondary-color: green;
+  --border: 1px solid var(--color-black);
+  --input-height: 42px;
+  --container-width: 500px;
+  --container-padding-width: 20px;
+  --border-radius: 10 px;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background-color: blue;
+}
+
+.color {
+  color: blue;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  max-width: calc(var(--container-width) + var(--container-padding-width) * 2);
+  padding: var;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+}
+.banner {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  font-family: "Heebo", sans-serif;
+}
+
+.banner-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  font-size: clamp(10px, 1.56vw, 30px);
+  line-height: 127%;
+}
+
+.banner-info::before {
+  content: "";
+  width: clamp(60px, 10.1vw, 194px);
+  aspect-ratio: 1;
+  background: url("img/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 30px;
+}
+
+.title {
+  font-size: clamp(60px, 18.75vw, 360px);
+  line-height: 1;
+}
