@@ -1,0 +1,30 @@
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+@mixin flex-center-ev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin custom-btn($bg: $btn-bg, $border: $btn-border, $radius: var(--radius)) {
+    background-color: $bg;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 4px 12px;
+    box-sizing: border-box;
+}
